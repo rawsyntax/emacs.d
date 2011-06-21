@@ -3,3 +3,5 @@
 \#*\#
 # compiled elisp
 *elc
+elpa/**
+places
