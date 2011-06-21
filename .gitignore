@@ -1,0 +1,5 @@
+# temp files emacs creates
+*~
+\#*\#
+# compiled elisp
+*elc
