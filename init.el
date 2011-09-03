@@ -30,6 +30,3 @@
                   'starter-kit-lisp
                   'smex)
 
-;; FIXME: for whatever reason, magit does not properly autoload
-;;        figure out what is wrong, and stop reinstalling every time
-(package-install 'magit)
