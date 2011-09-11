@@ -31,6 +31,5 @@
                   ;; then starter-kit-stuff
                   'starter-kit
                   'starter-kit-bindings
-                  'starter-kit-js
                   'starter-kit-ruby
                   'starter-kit-lisp)
