@@ -1,7 +1,10 @@
 ;; a few path fixes
 (setq dotfiles-dir (file-name-directory
-		    (or (buffer-file-name) load-file-name)))
-(add-to-list 'load-path dotfiles-dir)
+		    (or (buffer-file-name) load-file-name))
+      elpa-path (concat dotfiles-dir "elpa/"))
+
+(add-to-list 'load-path 'dotfiles-dir)
+(add-to-list 'load-path 'elpa-path)
 
 ;; setup marmalade package repo
 (require 'package)
@@ -11,22 +14,23 @@
 (package-initialize)
 
 ;; only run on fresh install
-(unless
-    (file-exists-p (concat dotfiles-dir "elpa/"))
-  (package-refresh-contents))
+(unless package-archive-contents (package-refresh-contents))
 
 (defun ensure-installed (&rest packages)
   "Checks if packages are installed, installs if not"
   (cond ((consp packages)
-         (unless (package-installed-p (car packages))
+         (when (not (package-installed-p (car packages)))
            (package-install (car packages)))
          (apply 'ensure-installed (cdr packages)))))
 
  ;; packages I use
-(ensure-installed 'starter-kit ;; includes magit goodness
+(ensure-installed 'smex
+                  'magit
+                  'color-theme
+                  'color-theme-solarized
+                  ;; then starter-kit-stuff
+                  'starter-kit
                   'starter-kit-bindings
                   'starter-kit-js
                   'starter-kit-ruby
-                  'starter-kit-lisp
-                  'smex)
-
+                  'starter-kit-lisp)
