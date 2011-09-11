@@ -28,6 +28,7 @@
                   'magit
                   'color-theme
                   'color-theme-solarized
+                  'js2-mode
                   ;; then starter-kit-stuff
                   'starter-kit
                   'starter-kit-bindings
