@@ -70,3 +70,6 @@ for when attached via a commandline client."
 
 ;; hook for setting up UI when not running in daemon mode
 (add-hook 'emacs-startup-hook 'reset-ui)
+
+;; idle-highlight annoys me, starter-kit turns it on by default
+(remove-hook 'prog-mode-hook 'esk-turn-on-idle-highlight-mode)
