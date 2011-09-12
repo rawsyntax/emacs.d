@@ -1,0 +1,3 @@
+[submodule "vendor/thorstadt-haml-mode"]
+	path = vendor/thorstadt-haml-mode
+	url = https://github.com/thorstadt/haml-mode
