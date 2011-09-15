@@ -29,6 +29,7 @@
                   'color-theme
                   'color-theme-solarized
                   'js2-mode
+                  'yaml-mode
                   ;; then starter-kit-stuff
                   'starter-kit
                   'starter-kit-bindings
