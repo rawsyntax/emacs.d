@@ -30,6 +30,7 @@
                   'color-theme-solarized
                   'js2-mode
                   'deft
+                  'sass-mode
                   'yaml-mode
                   ;; then starter-kit-stuff
                   'starter-kit
