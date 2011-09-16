@@ -8,3 +8,9 @@
 
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-x C-k") 'kill-region)
+
+;; stop using the arrow keys
+(global-unset-key [left])
+(global-unset-key [up])
+(global-unset-key [right])
+(global-unset-key [down])
