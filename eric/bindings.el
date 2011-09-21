@@ -1,4 +1,5 @@
 (global-set-key "\C-cm" 'magit-status)
+
 (global-set-key (kbd "\C-cu") 'reset-ui)
 
 (global-set-key (kbd "M-x") 'smex)
@@ -8,6 +9,8 @@
 
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-x C-k") 'kill-region)
+
+(global-set-key (kbd "C-x \\") 'align-regexp)
 
 ;; stop using the arrow keys
 (global-unset-key [left])
