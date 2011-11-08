@@ -22,3 +22,9 @@
 (global-unset-key [up])
 (global-unset-key [right])
 (global-unset-key [down])
+
+
+;; emacs running as server always, so disable quit
+(global-unset-key (kbd "C-x C-c"))
+;; minimize is just annoying
+(global-unset-key (kbd "C-x C-z"))
