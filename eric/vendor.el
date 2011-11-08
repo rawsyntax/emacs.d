@@ -8,7 +8,7 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
-;; marmalade's haml-mode does not work with emacs 24
+;; marmalade's version is broken for emacs 24
 (require 'haml-mode)
-;; marmalade's inf-ruby is 2.2.1 and does not work
 (require 'inf-ruby)
+(require 'gist)

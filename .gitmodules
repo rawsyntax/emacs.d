@@ -4,3 +4,6 @@
 [submodule "inf-ruby"]
 	path = vendor/inf-ruby
 	url = https://github.com/nonsequitur/inf-ruby.git
+[submodule "vendor/gist.el"]
+	path = vendor/gist.el
+	url = https://github.com/mhayashi1120/gist.el.git
