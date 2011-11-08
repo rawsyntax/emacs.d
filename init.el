@@ -32,6 +32,7 @@
                   'deft
                   'sass-mode
                   'yaml-mode
+                  'rvm
                   ;; then starter-kit-stuff
                   'starter-kit
                   'starter-kit-bindings

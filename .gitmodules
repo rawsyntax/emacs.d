@@ -1,3 +1,6 @@
 [submodule "vendor/thorstadt-haml-mode"]
 	path = vendor/thorstadt-haml-mode
 	url = https://github.com/thorstadt/haml-mode
+[submodule "inf-ruby"]
+	path = vendor/inf-ruby
+	url = https://github.com/nonsequitur/inf-ruby.git
