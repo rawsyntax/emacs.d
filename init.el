@@ -3,6 +3,9 @@
 		    (or (buffer-file-name) load-file-name))
       elpa-path (concat dotfiles-dir "elpa/"))
 
+(setq custom-file (concat dotfiles-dir "custom.el"))
+(load custom-file)
+
 (add-to-list 'load-path 'dotfiles-dir)
 (add-to-list 'load-path 'elpa-path)
 
@@ -33,6 +36,7 @@
                   'sass-mode
                   'yaml-mode
                   'rvm
+                  'markdown-mode
                   ;; then starter-kit-stuff
                   'starter-kit
                   'starter-kit-bindings
