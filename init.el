@@ -35,7 +35,6 @@
                   'deft
                   'sass-mode
                   'yaml-mode
-                  'rvm
                   'markdown-mode
                   ;; then starter-kit-stuff
                   'starter-kit
