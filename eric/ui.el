@@ -10,6 +10,7 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+
 (global-hl-line-mode 1)
 (blink-cursor-mode 1)
 
@@ -20,7 +21,6 @@
 ;;         above the laptop's display
 ;;         Haven't found a way to check multiple monitor
 ;;         relative orientation via emacs yet...
-;;         NOTE: try integrating with applescript for this?
 (defun reset-ui ()
   (interactive)
   (smex-initialize)
@@ -30,13 +30,9 @@
   (color-theme-solarized-dark)
   (set-cursor-color "deeppink")
   (set-face-background 'modeline-inactive "gray10")
-  ;;(set-face-background 'hl-line "gray20")
   (cond
    ((= 1050 (display-pixel-height)); 22" display
     (set-frame-size (selected-frame) 165 71)
-    (set-frame-position (selected-frame) 0 -1050))
-   ((= 1080 (display-pixel-height)); handle 1080p display
-    (set-frame-size (selected-frame) 165 68)
     (set-frame-position (selected-frame) 0 -1050))
    ((= 1200 (display-pixel-height)); 24" display
     (set-frame-size (selected-frame) 165 76)
