@@ -9,6 +9,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(magit-diff-add ((t (:foreground "Cyan"))))
- '(magit-diff-del ((t (:foreground "Purple"))))
- '(magit-item-highlight ((t (:background "textColor")))))
+ '(flymake-warnline ((((class color)) (:underline "yellow"))))
+ '(flymake-errline ((((class color)) (:underline "red"))))
+ '(magit-header ((t (:foreground "Yellow")))))
