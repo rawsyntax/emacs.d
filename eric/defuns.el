@@ -51,3 +51,13 @@
           (newalpha (if dec (- oldalpha 10) (+ oldalpha 10))))
     (when (and (>= newalpha frame-alpha-lower-limit) (<= newalpha 100))
       (modify-frame-parameters nil (list (cons 'alpha newalpha))))))
+
+(defun scratch-js ()
+  "Create or switch to a javascript mode scratch buffer"
+  (interactive)
+
+  (if (not (eq nil (get-buffer "scratch-js")))
+      (switch-to-buffer "scratch-js")
+    (set-buffer (get-buffer-create "scratch-js"))
+    (js2-mode)
+    (switch-to-buffer "scratch-js")))
