@@ -9,6 +9,8 @@
   (interactive)
   (revert-buffer t t))
 
+;; TODO: make rename uniquify buffer if a buffer with same name
+;;       already exists
 (defun rename-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."
   (interactive "sNew name: ")
