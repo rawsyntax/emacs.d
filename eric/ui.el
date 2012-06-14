@@ -12,7 +12,6 @@
 ;; pinging sites that don't exist, which locks the UI until timeout)
 (setq ffap-machine-p-known 'reject)
 
-(scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
