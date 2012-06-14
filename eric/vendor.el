@@ -12,3 +12,4 @@
 (require 'haml-mode)
 (require 'inf-ruby)
 (require 'gist)
+(require 'rhtml-mode)

@@ -4,3 +4,6 @@
 [submodule "vendor/gist.el"]
 	path = vendor/gist.el
 	url = https://github.com/mhayashi1120/gist.el.git
+[submodule "vendor/rhtml"]
+	path = vendor/rhtml
+	url = git://github.com/eschulte/rhtml.git
