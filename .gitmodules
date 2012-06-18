@@ -7,3 +7,9 @@
 [submodule "vendor/rhtml"]
 	path = vendor/rhtml
 	url = git://github.com/eschulte/rhtml.git
+[submodule "vendor/yasnippets-rspec"]
+	path = vendor/yasnippets-rspec
+	url = git://github.com/rawsyntax/yasnippets-rspec.git
+[submodule "vendor/yasnippets-rails"]
+	path = vendor/yasnippets-rails
+	url = git://github.com/rawsyntax/yasnippets-rails.git
