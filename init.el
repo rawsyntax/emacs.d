@@ -33,9 +33,12 @@
                   'color-theme-solarized
                   'js2-mode
                   'deft
+                  'haml-mode
                   'sass-mode
                   'yaml-mode
                   'markdown-mode
+                  'ack-and-a-half
+                  'yasnippet
                   ;; then starter-kit-stuff
                   'starter-kit
                   'starter-kit-bindings
