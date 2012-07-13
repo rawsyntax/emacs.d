@@ -63,3 +63,9 @@
     (set-buffer (get-buffer-create "scratch-js"))
     (js2-mode)
     (switch-to-buffer "scratch-js")))
+
+(defun remove-console-log-js ()
+  "Delete console.log() debugging lines"
+  (interactive)
+  (save-excursion
+    (replace-regexp "^.*console\.log.+\w*\n" "")))
