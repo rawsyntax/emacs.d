@@ -9,3 +9,5 @@ places
 tramp
 .smex-items
 eshell/**
+image-dired/
+.DS_Store
