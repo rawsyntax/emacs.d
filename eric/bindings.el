@@ -30,3 +30,13 @@
 
 (global-set-key (kbd "M-%") 'query-replace-regexp)
 (global-set-key (kbd "C-M-%") 'query-replace)
+
+;; ack bindings
+(global-set-key (kbd "C-c C-k C-a") 'ack-and-a-half)
+
+;; Why can't open-line just indent according to mode?
+(global-set-key (kbd "C-o") 'vi-open-next-line)
+
+;; More precise character zapping
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+(global-set-key (kbd "C-M-z") 'zap-to-char)

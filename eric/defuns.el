@@ -69,3 +69,25 @@
   (interactive)
   (save-excursion
     (replace-regexp "^.*console\.log.+\w*\n" "")))
+
+(defun zap-up-to-char (arg char)
+  "Kill up to and excluding ARG'th occurrence of CHAR.
+   Goes backward if ARG is negative; error if CHAR not found."
+  (interactive "*p\ncZap up to char: ")
+  (kill-region (point)
+               (progn
+                 (search-forward
+                  (char-to-string char) nil nil arg)
+                 (progn (goto-char
+                         (if (> arg 0) (1- (point)) (1+ (point))))
+                        (point)))))
+
+(defun vi-open-next-line (arg)
+  "Move to the next line (like vi) and then opens a line."
+  (interactive "p")
+  (if (looking-at "^")
+      (open-line arg)
+    (end-of-line)
+    (open-line arg)
+    (next-line 1)
+    (indent-according-to-mode)))
