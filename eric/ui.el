@@ -25,7 +25,8 @@
 ;;         above the laptop's display
 ;;         Haven't found a way to check multiple monitor
 ;;         relative orientation via emacs yet...
-(defun reset-ui ()
+(defun reset-ui (frame)
+  (select-frame frame)
   (interactive)
   (smex-initialize)
   (load-theme 'solarized-dark t)
@@ -44,30 +45,10 @@
     (set-frame-position (selected-frame) 0 0)))
   (split-window-horizontally))
 
-
-(defun emacs-client-setup ()
-  "Set the look and feel, different for terminal vs GUI emacsclient"
-  (if (window-system)
-      (spartan-gui)
-    (spartan-cli)))
-
-(if (daemonp)
-    (progn
-      (defun spartan-gui ()
-        "Restore the look and feel that running in daemon mode cannot account
-for when attached via a GUI client."
-        (setq ns-command-modifier 'meta)
-        ;; restore look and feel
-        (reset-ui))
-      (defun spartan-cli ()
-        "Restore the look and feel that running in daemon mode cannot account
-for when attached via a commandline client."
-        (set-cursor-color "deeppink")
-        )
-      ))
-
 ;; fires when an emacs frame is created (emacsclient)
-(add-hook 'server-visit-hook 'emacs-client-setup)
+;; invoke like this ( on osx):
+;; emacsclient -c -n; osascript -e "tell application \"Emacs\" to activate"
+(add-hook 'after-make-frame-functions 'reset-ui)
 
 ;; hook for setting up UI when not running in daemon mode
 (add-hook 'emacs-startup-hook 'reset-ui)
