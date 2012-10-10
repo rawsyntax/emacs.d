@@ -29,8 +29,6 @@
  ;; packages I use
 (ensure-installed 'smex
                   'magit
-                  'color-theme
-                  'color-theme-solarized
                   'js2-mode
                   'deft
                   'haml-mode
@@ -39,6 +37,7 @@
                   'markdown-mode
                   'ack-and-a-half
                   'yasnippet
+                  'solarized-theme
                   ;; then starter-kit-stuff
                   'starter-kit
                   'starter-kit-bindings

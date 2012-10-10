@@ -28,10 +28,8 @@
 (defun reset-ui ()
   (interactive)
   (smex-initialize)
-  (require 'color-theme)
-  (require 'color-theme-solarized)
+  (load-theme 'solarized-dark t)
   (delete-other-windows)
-  (color-theme-solarized-dark)
   (set-cursor-color "deeppink")
   (set-face-background 'modeline-inactive "gray10")
   (cond
