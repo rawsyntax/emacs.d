@@ -25,8 +25,12 @@
 ;;         above the laptop's display
 ;;         Haven't found a way to check multiple monitor
 ;;         relative orientation via emacs yet...
-(defun reset-ui (frame)
-  (select-frame frame)
+;;
+;; a frame is passed in when firing on after-make-frame-fuctions,
+;; but not necessary when calling interactively
+(defun reset-ui (&optional frame)
+  (if frame
+    (select-frame frame))
   (interactive)
   (smex-initialize)
   (load-theme 'solarized-dark t)
