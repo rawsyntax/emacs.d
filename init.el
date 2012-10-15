@@ -13,29 +13,33 @@
 (require 'package)
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
+;; call so that package loads marmalade-repo
 (package-initialize)
 
+;; only run on fresh install
 (unless package-archive-contents (package-refresh-contents))
 
-;; packages I use
-(defvar my-packages
-  '(smex
-    magit
-    deft
-    imgur
-    haml-mode sass-mode yaml-mode js2-mode
-    flymake-haml flymake-ruby flymake-sass
-    markdown-mode
-    ack-and-a-half
-    yasnippet
-    solarized-theme
-    starter-kit
-    starter-kit-bindings starter-kit-ruby starter-kit-lisp)
-  "A list of packages to ensure are installed at launch.")
+(defun ensure-installed (&rest packages)
+  "Checks if packages are installed, installs if not"
+  (cond ((consp packages)
+         (when (not (package-installed-p (car packages)))
+           (package-install (car packages)))
+         (apply 'ensure-installed (cdr packages)))))
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+ ;; packages I use
+(ensure-installed 'smex
+                  'magit
+                  'js2-mode
+                  'deft
+                  'haml-mode
+                  'sass-mode
+                  'yaml-mode
+                  'markdown-mode
+                  'ack-and-a-half
+                  'yasnippet
+                  'solarized-theme
+                  ;; then starter-kit-stuff
+                  'starter-kit
+                  'starter-kit-bindings
+                  'starter-kit-ruby
+                  'starter-kit-lisp)
