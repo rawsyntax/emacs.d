@@ -34,6 +34,7 @@
                   'haml-mode
                   'sass-mode
                   'yaml-mode
+                  'slim-mode
                   'markdown-mode
                   'ack-and-a-half
                   'yasnippet
