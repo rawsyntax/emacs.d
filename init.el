@@ -29,17 +29,20 @@
  ;; packages I use
 (ensure-installed 'smex
                   'magit
-                  'js2-mode
                   'deft
+                  'ack-and-a-half
+                  'yasnippet
+
+                  'js2-mode
+                  'coffee-mode
                   'haml-mode
                   'sass-mode
                   'yaml-mode
                   'slim-mode
                   'markdown-mode
-                  'ack-and-a-half
-                  'yasnippet
+
                   'solarized-theme
-                  ;; then starter-kit-stuff
+
                   'starter-kit
                   'starter-kit-bindings
                   'starter-kit-ruby
