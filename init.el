@@ -29,7 +29,6 @@
  ;; packages I use
 (ensure-installed 'smex
                   'magit
-                  'deft
                   'ack-and-a-half
                   'yasnippet
 

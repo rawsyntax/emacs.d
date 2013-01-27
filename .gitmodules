@@ -13,3 +13,6 @@
 [submodule "vendor/yasnippets-rails"]
 	path = vendor/yasnippets-rails
 	url = git://github.com/rawsyntax/yasnippets-rails.git
+[submodule "vendor/deft"]
+	path = vendor/deft
+	url = git://jblevins.org/git/deft.git
