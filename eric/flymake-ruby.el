@@ -1,6 +1,9 @@
 ;; flymake
 (require 'flymake)
 
+;; make flymake use current rbenv ruby
+(setq flymake-ruby-executable (shell-command-to-string "rbenv which ruby"))
+
 (defun flymake-create-temp-intemp (file-name prefix)
   "Return file name in temporary directory for checking FILE-NAME.
        This is a replacement for `flymake-create-temp-inplace'. The
