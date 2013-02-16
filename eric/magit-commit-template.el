@@ -24,4 +24,3 @@
           (goto-char (point-max))))))
 
 (add-hook 'magit-log-edit-mode-hook 'su/magit/commit-message-template)
-(expand-file-name use-template-directory)
