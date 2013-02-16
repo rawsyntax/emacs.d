@@ -1,6 +1,6 @@
 ;; TODO: pull author initials from (user-full-name)
 (setq author-initials "EH")
-(setq use-template-directory "/Users/eric/source")
+(setq use-template-directory "~/source")
 
 (defun set-pivotal-story-id (id)
   "sets current pivotal tracker story id"
@@ -8,11 +8,13 @@
   (progn
     (setq pivotal-story-id id)))
 
-;; TODO: only do this if dir is under ~/source ??
 ;; TODO: prompt for pivotal-story-id if not set? or perhaps use 000
 (defun su/magit/commit-message-template (&rest discard)
   "Have a template for the commit message, under a specific directory"
-  (if (string-prefix-p use-template-directory (magit-git-dir))
+  (unless (boundp 'pivotal-story-id)
+    (setq pivotal-story-id "000"))
+  (if (string-prefix-p (expand-file-name use-template-directory)
+                       (magit-git-dir))
       (unless current-prefix-arg ;; ignore commit amends
         (let ((tag (format "[%s] [%s] " author-initials pivotal-story-id)))
           (goto-char (point-min))
@@ -20,5 +22,5 @@
             (insert tag))
           (goto-char (point-max))))))
 
-
 (add-hook 'magit-log-edit-mode-hook 'su/magit/commit-message-template)
+(expand-file-name use-template-directory)
