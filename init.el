@@ -12,8 +12,8 @@
 ;; setup marmalade package repo
 (require 'package)
 (add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-;; call so that package loads marmalade-repo
+             '("melpa" . "http://melpa.milkbox.net/packages/"))
+
 (package-initialize)
 
 ;; only run on fresh install
