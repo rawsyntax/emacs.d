@@ -38,6 +38,7 @@
                   'sass-mode
                   'yaml-mode
                   'slim-mode
+                  'rspec-mode
                   'markdown-mode
 
                   'solarized-theme
