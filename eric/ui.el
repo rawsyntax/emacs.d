@@ -59,4 +59,4 @@
 (add-hook 'emacs-startup-hook 'reset-ui)
 
 ;; idle-highlight annoys me, starter-kit turns it on by default
-(remove-hook 'prog-mode-hook 'esk-turn-on-idle-highlight-mode)
+(remove-hook 'prog-mode-hook 'idle-highlight-mode)
