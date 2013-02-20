@@ -1,14 +1,3 @@
-;; a few path fixes
-(setq dotfiles-dir (file-name-directory
-		    (or (buffer-file-name) load-file-name))
-      elpa-path (concat dotfiles-dir "elpa/"))
-
-(setq custom-file (concat dotfiles-dir "custom.el"))
-(load custom-file)
-
-(add-to-list 'load-path 'dotfiles-dir)
-(add-to-list 'load-path 'elpa-path)
-
 ;; setup marmalade package repo
 (require 'package)
 (add-to-list 'package-archives
@@ -16,7 +5,6 @@
 
 (package-initialize)
 
-;; only run on fresh install
 (unless package-archive-contents (package-refresh-contents))
 
 (defun ensure-installed (&rest packages)
@@ -31,6 +19,8 @@
                   'magit
                   'ack-and-a-half
                   'yasnippet
+
+                  'exec-path-from-shell
 
                   'js2-mode
                   'coffee-mode
