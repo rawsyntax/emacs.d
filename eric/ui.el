@@ -60,3 +60,16 @@
 
 ;; idle-highlight annoys me, starter-kit turns it on by default
 (remove-hook 'prog-mode-hook 'idle-highlight-mode)
+
+
+(fset 'eshell-visor-on
+      "\C-x1\M-xeshell\n")
+(fset 'eshell-visor-off
+      "\C-x3\M-xbury-buffer\n\C-xo\M-xbury-buffer\n\M-xswap-windows")
+
+;; assumes using reset-ui based layout
+(defun toggle-eshell-visor ()
+  (interactive)
+  (if (string= "eshell-mode" (eval 'major-mode))
+      (execute-kbd-macro (symbol-function 'eshell-visor-off))
+    (execute-kbd-macro (symbol-function 'eshell-visor-on))))
