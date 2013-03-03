@@ -33,10 +33,9 @@
     (select-frame frame))
   (interactive)
   (smex-initialize)
-  (load-theme 'solarized-dark t)
+  (load-theme 'zenburn t)
   (delete-other-windows)
   (set-cursor-color "deeppink")
-  (set-face-background 'modeline-inactive "gray10")
   (if (window-system)
       (cond
        ((= 1050 (display-pixel-height)); 22" display

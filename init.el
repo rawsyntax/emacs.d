@@ -31,7 +31,7 @@
                   'rspec-mode
                   'markdown-mode
 
-                  'solarized-theme
+                  'zenburn-theme
 
                   'starter-kit
                   'starter-kit-bindings
