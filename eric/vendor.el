@@ -13,4 +13,5 @@
 (require 'haml-mode)
 (require 'gist)
 (require 'rhtml-mode)
+(add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
 (require 'deft)
