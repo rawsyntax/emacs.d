@@ -19,6 +19,7 @@
                   'magit
                   'ack-and-a-half
                   'yasnippet
+                  'multi-term
 
                   'exec-path-from-shell
 
