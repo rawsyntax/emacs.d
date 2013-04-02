@@ -1,9 +1,6 @@
 [submodule "vendor/thorstadt-haml-mode"]
 	path = vendor/thorstadt-haml-mode
 	url = https://github.com/thorstadt/haml-mode
-[submodule "vendor/gist.el"]
-	path = vendor/gist.el
-	url = https://github.com/mhayashi1120/gist.el.git
 [submodule "vendor/rhtml"]
 	path = vendor/rhtml
 	url = git://github.com/eschulte/rhtml.git
@@ -16,3 +13,6 @@
 [submodule "vendor/deft"]
 	path = vendor/deft
 	url = git://jblevins.org/git/deft.git
+[submodule "vendor/yagist.el"]
+	path = vendor/yagist.el
+	url = git://github.com/mhayashi1120/yagist.el.git

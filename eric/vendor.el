@@ -11,7 +11,7 @@
 
 ;; marmalade's version is broken for emacs 24
 (require 'haml-mode)
-(require 'gist)
 (require 'rhtml-mode)
+(require 'yagist)
 (add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
 (require 'deft)
