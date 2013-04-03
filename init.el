@@ -31,6 +31,7 @@
                   'slim-mode
                   'rspec-mode
                   'markdown-mode
+                  'puppet-mode
 
                   'zenburn-theme
 
