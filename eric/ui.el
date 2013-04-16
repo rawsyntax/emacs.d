@@ -61,14 +61,11 @@
 (remove-hook 'prog-mode-hook 'idle-highlight-mode)
 
 
-(fset 'eshell-visor-on
-      "\C-x1\M-xeshell\n")
-(fset 'eshell-visor-off
-      "\C-x3\M-xbury-buffer\n\C-xo\M-xbury-buffer\n\M-xswap-windows")
-
-;; assumes using reset-ui based layout
 (defun toggle-eshell-visor ()
+  "Brings up a visor like eshell buffer, filling the entire emacs frame"
   (interactive)
   (if (string= "eshell-mode" (eval 'major-mode))
-      (execute-kbd-macro (symbol-function 'eshell-visor-off))
-    (execute-kbd-macro (symbol-function 'eshell-visor-on))))
+      (jump-to-register :pre-eshell-visor-window-configuration)
+    (window-configuration-to-register :pre-eshell-visor-window-configuration)
+    (call-interactively 'eshell)
+    (delete-other-windows)))
