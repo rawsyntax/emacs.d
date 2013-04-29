@@ -42,7 +42,7 @@
         (set-frame-size (selected-frame) 163 71)
         (set-frame-position (selected-frame) 0 -1050))
        ((= 1200 (display-pixel-height)); 24" display
-        (set-frame-size (selected-frame) 163 82)
+        (set-frame-size (selected-frame) 163 80)
         (set-frame-position (selected-frame) 0 -1200))
        (t ; laptop runs 1440x900
         (set-frame-size (selected-frame) 163 57)
