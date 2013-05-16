@@ -32,6 +32,7 @@
                   'rspec-mode
                   'markdown-mode
                   'puppet-mode
+                  'git-commit-mode
 
                   'zenburn-theme
 
