@@ -39,7 +39,7 @@
   (if (window-system)
       (cond
        ((= 1050 (display-pixel-height)); 22" display
-        (set-frame-size (selected-frame) 163 71)
+        (set-frame-size (selected-frame) 163 68)
         (set-frame-position (selected-frame) 0 -1050))
        ((= 1200 (display-pixel-height)); 24" display
         (set-frame-size (selected-frame) 163 80)
