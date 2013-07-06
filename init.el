@@ -33,6 +33,8 @@
                   'markdown-mode
                   'puppet-mode
                   'git-commit-mode
+                  'feature-mode
+
 
                   'zenburn-theme
 
