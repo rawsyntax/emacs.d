@@ -91,3 +91,9 @@
     (open-line arg)
     (next-line 1)
     (indent-according-to-mode)))
+
+(defun touch-this-file ()
+  "updates mtime on the file for the current buffer"
+  (interactive)
+  (shell-command (concat "touch " (shell-quote-argument (buffer-file-name))))
+  (clear-visited-file-modtime))
