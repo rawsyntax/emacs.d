@@ -34,7 +34,7 @@
 (global-set-key (kbd "C-M-%") 'query-replace)
 
 ;; ack bindings
-(global-set-key (kbd "C-c C-k C-a") 'ack-and-a-half)
+(global-set-key (kbd "C-c a") 'ack-and-a-half)
 
 (global-set-key (kbd "C-c t") 'toggle-eshell-visor)
 
