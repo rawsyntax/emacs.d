@@ -22,6 +22,7 @@
                   'multi-term
 
                   'exec-path-from-shell
+                  'dash-at-point
 
                   'js2-mode
                   'coffee-mode
@@ -35,6 +36,7 @@
                   'git-commit-mode
                   'feature-mode
 
+                  'browse-kill-ring
 
                   'zenburn-theme
 

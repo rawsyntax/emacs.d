@@ -44,3 +44,5 @@
 ;; More precise character zapping
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "C-M-z") 'zap-to-char)
+
+(global-set-key (kbd "M-y") 'browse-kill-ring)
