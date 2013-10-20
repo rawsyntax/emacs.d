@@ -15,7 +15,8 @@
          (apply 'ensure-installed (cdr packages)))))
 
  ;; packages I use
-(ensure-installed 'smex
+(ensure-installed 'autopair
+                  'smex
                   'magit
                   'ack-and-a-half
                   'yasnippet
