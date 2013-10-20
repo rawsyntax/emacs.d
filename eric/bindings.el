@@ -36,7 +36,7 @@
 ;; ack bindings
 (global-set-key (kbd "C-c a") 'ack-and-a-half)
 
-(global-set-key (kbd "C-c t") 'toggle-eshell-visor)
+(global-set-key (kbd "C-c t") 'toggle-shell-visor)
 
 ;; Why can't open-line just indent according to mode?
 (global-set-key (kbd "C-o") 'vi-open-next-line)

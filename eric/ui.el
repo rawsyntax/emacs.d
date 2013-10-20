@@ -61,11 +61,11 @@
 (remove-hook 'prog-mode-hook 'idle-highlight-mode)
 
 
-(defun toggle-eshell-visor ()
+(defun toggle-shell-visor ()
   "Brings up a visor like eshell buffer, filling the entire emacs frame"
   (interactive)
-  (if (string= "eshell-mode" (eval 'major-mode))
-      (jump-to-register :pre-eshell-visor-window-configuration)
-    (window-configuration-to-register :pre-eshell-visor-window-configuration)
-    (call-interactively 'eshell)
+  (if (string= "term-mode" (eval 'major-mode))
+      (jump-to-register :pre-shell-visor-window-configuration)
+    (window-configuration-to-register :pre-shell-visor-window-configuration)
+    (call-interactively 'multi-term-next)
     (delete-other-windows)))
