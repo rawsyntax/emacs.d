@@ -35,6 +35,7 @@
                   'puppet-mode
                   'git-commit-mode
                   'feature-mode
+                  'erlang
 
                   'browse-kill-ring
 
