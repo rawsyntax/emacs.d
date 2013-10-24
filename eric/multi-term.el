@@ -3,5 +3,9 @@
 (add-hook 'term-mode-hook (lambda ()
                             (setq show-trailing-whitespace nil)
                             (autopair-mode -1)))
-(autoload 'multi-term "multi-term" nil t)
-(autoload 'multi-term-next "multi-term" nil t)
+
+(add-hook 'term-mode-hook
+  (lambda ()
+    (add-to-list 'term-bind-key-alist '("M-[" . multi-term-next))
+    (add-to-list 'term-bind-key-alist '("M-]" . multi-term-prev))
+    (add-to-list 'term-bind-key-alist '("C-c C-M-t" .  multi-term))))
