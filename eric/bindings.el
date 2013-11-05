@@ -19,6 +19,8 @@
 (global-set-key (kbd "C-0") '(lambda()(interactive)
                                (modify-frame-parameters nil `((alpha . 100)))))
 
+(global-set-key "\C-cd" 'dash-at-point)
+
 ;; stop using the arrow keys
 (global-unset-key [left])
 (global-unset-key [up])
