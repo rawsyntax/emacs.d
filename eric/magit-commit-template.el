@@ -4,11 +4,11 @@
 
 (defun set-pivotal-story-id (id)
   "sets current pivotal tracker story id"
-  (interactive "spivotal-story-id:")
+  (interactive "sPivotal Story ID:")
   (progn
     (setq pivotal-story-id id)))
 
-(defun su/magit/commit-message-template (&rest discard)
+(defun magit-commit-message-template (&rest discard)
   "Have a template for the commit message, under a specific directory"
   ;; use 000 unless already set
   (unless (boundp 'pivotal-story-id)
@@ -23,4 +23,4 @@
             (insert tag))
           (goto-char (point-max))))))
 
-(add-hook 'magit-log-edit-mode-hook 'su/magit/commit-message-template)
+(add-hook 'magit-log-edit-mode-hook 'magit-commit-message-template)
