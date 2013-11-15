@@ -21,6 +21,7 @@
           (goto-char (point-min))
           (unless (search-forward tag nil t)
             (insert tag))
-          (goto-char (point-max))))))
+          (goto-char (point-min))
+          (move-end-of-line ())))))
 
-(add-hook 'magit-log-edit-mode-hook 'magit-commit-message-template)
+(add-hook 'git-commit-mode-hook 'magit-commit-message-template)
