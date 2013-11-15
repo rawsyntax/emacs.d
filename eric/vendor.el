@@ -15,3 +15,4 @@
 (require 'yagist)
 (add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
 (require 'deft)
+(require 'ag-and-a-half)

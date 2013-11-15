@@ -35,8 +35,8 @@
 (global-set-key (kbd "M-%") 'query-replace-regexp)
 (global-set-key (kbd "C-M-%") 'query-replace)
 
-;; ack bindings
-(global-set-key (kbd "C-c a") 'ack-and-a-half)
+;; ag bindings
+(global-set-key (kbd "C-c a") 'ag-and-a-half)
 
 (global-set-key (kbd "C-c t") 'toggle-shell-visor)
 

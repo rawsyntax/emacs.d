@@ -16,3 +16,6 @@
 [submodule "vendor/yagist.el"]
 	path = vendor/yagist.el
 	url = git://github.com/mhayashi1120/yagist.el.git
+[submodule "vendor/ag-and-a-half"]
+	path = vendor/ag-and-a-half
+	url = git@github.com:rawsyntax/ag-and-a-half.git
