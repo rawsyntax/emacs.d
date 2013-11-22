@@ -18,7 +18,6 @@
 (ensure-installed 'autopair
                   'smex
                   'magit
-                  'ack-and-a-half
                   'yasnippet
                   'multi-term
 
