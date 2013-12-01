@@ -43,5 +43,6 @@
 
                   'starter-kit
                   'starter-kit-bindings
+                  'inf-ruby
                   'starter-kit-ruby
                   'starter-kit-lisp)
