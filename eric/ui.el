@@ -65,7 +65,13 @@
   "Brings up a visor like eshell buffer, filling the entire emacs frame"
   (interactive)
   (if (string= "term-mode" (eval 'major-mode))
-      (jump-to-register :pre-shell-visor-window-configuration)
+      (progn
+        (setq eawh-multi-term-buffer (buffer-name))
+        (jump-to-register :pre-shell-visor-window-configuration))
     (window-configuration-to-register :pre-shell-visor-window-configuration)
     (call-interactively 'multi-term-next)
-    (delete-other-windows)))
+    (delete-other-windows)
+
+    (if (boundp 'eawh-multi-term-buffer)
+        (switch-to-buffer eawh-multi-term-buffer))
+    ))
