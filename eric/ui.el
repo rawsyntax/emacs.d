@@ -20,6 +20,9 @@
 
 (setq-default show-trailing-whitespace t)
 
+;; Prefer vertically split window layout
+(setq split-height-threshold nil)
+
 ;;default display position/size based on display resolution
 ;;warning: assumption that the 24/22 " displays are oriented
 ;;         above the laptop's display
