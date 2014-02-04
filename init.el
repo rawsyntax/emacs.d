@@ -14,7 +14,7 @@
            (package-install (car packages)))
          (apply 'ensure-installed (cdr packages)))))
 
- ;; packages I use
+;; packages I use
 (ensure-installed 'autopair
                   'smex
                   'magit
@@ -23,10 +23,13 @@
 
                   'exec-path-from-shell
                   'dash-at-point
+                  'dictionary
 
                   'js2-mode
+                  'clojure-mode
                   'coffee-mode
                   'haml-mode
+                  'less-css-mode
                   'sass-mode
                   'yaml-mode
                   'slim-mode
