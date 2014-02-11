@@ -49,3 +49,5 @@
 (global-set-key (kbd "C-M-z") 'zap-to-char)
 
 (global-set-key (kbd "M-y") 'browse-kill-ring)
+(global-set-key (kbd "C-c S") 'find-shell-init-file)
+(global-set-key (kbd "C-c I") 'find-user-init-file)
