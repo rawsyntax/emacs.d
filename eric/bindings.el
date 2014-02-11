@@ -31,6 +31,7 @@
 (global-unset-key (kbd "C-x C-c"))
 ;; minimize is just annoying
 (global-unset-key (kbd "C-x C-z"))
+(global-unset-key (kbd "C-z"))
 
 (global-set-key (kbd "M-%") 'query-replace-regexp)
 (global-set-key (kbd "C-M-%") 'query-replace)
