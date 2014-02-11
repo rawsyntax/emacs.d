@@ -2,6 +2,7 @@
 
 (add-hook 'term-mode-hook
           (lambda ()
+            (setq yas-dont-activate t)
             (setq show-trailing-whitespace nil)
             (autopair-mode -1)
             (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
