@@ -29,6 +29,7 @@
 
 ;; emacs running as server always, so disable quit
 (global-unset-key (kbd "C-x C-c"))
+
 ;; minimize is just annoying
 (global-unset-key (kbd "C-x C-z"))
 (global-unset-key (kbd "C-z"))
@@ -51,3 +52,42 @@
 (global-set-key (kbd "M-y") 'browse-kill-ring)
 (global-set-key (kbd "C-c S") 'find-shell-init-file)
 (global-set-key (kbd "C-c I") 'find-user-init-file)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; starter-kit-bindings
+(global-set-key (kbd "C-c f") 'find-file-in-project)
+(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "C-c n") 'esk-cleanup-buffer)
+
+;; Font size
+(define-key global-map (kbd "C-+") 'text-scale-increase)
+(define-key global-map (kbd "C--") 'text-scale-decrease)
+
+;; Use regex searches by default.
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "\C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "M-%") 'query-replace-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
+(global-set-key (kbd "C-M-%") 'query-replace)
+
+;; Jump to a definition in the current file. (Protip: this is awesome.)
+(global-set-key (kbd "C-x C-i") 'imenu)
+
+;; File finding
+(global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
+(global-set-key (kbd "C-c y") 'bury-buffer)
+(global-set-key (kbd "C-c r") 'revert-buffer)
+
+;; Window switching. (C-x o goes to the next window)
+(global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1))) ;; back one
+(global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2))) ;; forward two
+
+;; Help should search more than just commands
+(define-key 'help-command "a" 'apropos)
+
+;; Should be able to eval-and-replace anywhere.
+(global-set-key (kbd "C-c e") 'esk-eval-and-replace)
+
+;; M-S-6 is awkward
+(global-set-key (kbd "C-c q") 'join-line)

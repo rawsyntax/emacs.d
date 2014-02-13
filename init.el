@@ -45,5 +45,4 @@
                   'zenburn-theme
 
                   'starter-kit
-                  'starter-kit-bindings
                   'inf-ruby)
