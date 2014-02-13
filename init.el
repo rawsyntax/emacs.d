@@ -23,7 +23,6 @@
 
                   'exec-path-from-shell
                   'dash-at-point
-                  'dictionary
 
                   'js2-mode
                   'clojure-mode
