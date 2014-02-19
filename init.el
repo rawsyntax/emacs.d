@@ -39,6 +39,11 @@
                   'feature-mode
                   'erlang
 
+                  'flx
+                  'flx-ido
+                  'projectile
+
+
                   'browse-kill-ring
 
                   'zenburn-theme

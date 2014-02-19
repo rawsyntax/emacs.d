@@ -12,3 +12,4 @@ eshell/**
 image-dired/
 .DS_Store
 /eric/core-apps-macros.el
+/projectile-bookmarks.eld
