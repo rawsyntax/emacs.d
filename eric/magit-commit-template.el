@@ -15,7 +15,7 @@
     (setq pivotal-story-id "000"))
   ;; restrict template to use-template-directory (and below)
   (if (string-prefix-p (expand-file-name use-template-directory)
-                       (magit-git-dir))
+                       (expand-file-name (magit-git-dir)))
       (unless current-prefix-arg ;; ignore commit amends
         (let ((tag (format "[%s] [%s] " author-initials pivotal-story-id)))
           (goto-char (point-min))
