@@ -43,10 +43,10 @@
                   'flx-ido
                   'projectile
 
-
                   'browse-kill-ring
 
                   'zenburn-theme
 
                   'starter-kit
-                  'inf-ruby)
+                  'inf-ruby
+                  'flymake-ruby)
