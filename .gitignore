@@ -13,3 +13,4 @@ image-dired/
 .DS_Store
 /eric/core-apps-macros.el
 /projectile-bookmarks.eld
+/eric/yagist-github-token.el
