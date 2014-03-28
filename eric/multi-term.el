@@ -10,5 +10,6 @@
             (autopair-mode -1)
             (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
             (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))
+            (add-to-list 'term-bind-key-alist '("C-z" . term-send-raw))
             (setq term-buffer-maximum-size 50000)
             (define-key term-raw-map (kbd "C-y") 'term-paste)))
