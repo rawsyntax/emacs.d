@@ -1,4 +1,5 @@
-(setq multi-term-program "/bin/zsh")
+;; use user's login shell for multi-term
+(setq multi-term-program (shell-command-to-string "dscl /Search -read \"/Users/$USER\" UserShell | awk '{print $2}'|tr -d \"\n\"  "))
 
 (add-hook 'term-mode-hook
           (lambda ()
