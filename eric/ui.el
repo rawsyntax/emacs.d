@@ -1,3 +1,9 @@
+(when window-system
+  (setq frame-title-format '(buffer-file-name "%f" ("%b")))
+  (tooltip-mode -1)
+  (mouse-wheel-mode t)
+  (blink-cursor-mode 1))
+
 ;; ring the bell less
 (setq visible-bell 1
       ring-bell-function (lambda ()
@@ -6,17 +12,73 @@
                                            abort-recursive-edit
                                            exit-minibuffer
                                            keyboard-quit))
-                             (ding))))
+                             (ding)))
+      inhibit-startup-message t
+      color-theme-is-global t
+      sentence-end-double-space nil
+      shift-select-mode nil
+      mouse-yank-at-point t
+      uniquify-buffer-name-style 'forward
+      whitespace-style '(face trailing lines-tail tabs)
+      whitespace-line-column 80
+      ediff-window-setup-function 'ediff-setup-windows-plain
+      save-place-file (concat user-emacs-directory "places")
+      backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
+      diff-switches "-u")
 
+(add-hook 'before-make-frame-hook 'esk-turn-off-tool-bar)
+
+(add-to-list 'safe-local-variable-values '(lexical-binding . t))
+(add-to-list 'safe-local-variable-values '(whitespace-line-column . 80))
+
+;; Highlight matching parentheses when the point is on them.
+(show-paren-mode 1)
+
+(ido-mode t)
+(ido-ubiquitous-mode)
+(setq ido-enable-prefix nil
+      ido-enable-flex-matching t
+      ido-auto-merge-work-directories-length nil
+      ido-create-new-buffer 'always
+      ido-use-filename-at-point 'guess
+      ido-use-virtual-buffers t
+      ido-handle-duplicate-virtual-buffers 2
+      ido-max-prospects 10)
+
+(add-to-list 'ido-ignore-files "\\`\\.DS_Store")
+
+
+(require 'ffap)
+(defvar ffap-c-commment-regexp "^/\\*+"
+  "Matches an opening C-style comment, like \"/***\".")
+
+(defadvice ffap-file-at-point (after avoid-c-comments activate)
+  "Don't return paths like \"/******\" unless they actually exist.
+
+This fixes the bug where ido would try to suggest a C-style
+comment as a filename."
+  (ignore-errors
+    (when (and ad-return-value
+               (string-match-p ffap-c-commment-regexp
+                               ad-return-value)
+               (not (ffap-file-exists-string ad-return-value)))
+      (setq ad-return-value nil))))
 ;; prevent ffap from trying to interpret code as domain names (and
 ;; pinging sites that don't exist, which locks the UI until timeout)
 (setq ffap-machine-p-known 'reject)
+
+
+(set-default 'indent-tabs-mode nil)
+(set-default 'indicate-empty-lines t)
+(set-default 'imenu-auto-rescan t)
+
+(defalias 'yes-or-no-p 'y-or-n-p)
+(defalias 'auto-tail-revert-mode 'tail-mode)
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
 (global-hl-line-mode 1)
-(blink-cursor-mode 1)
 
 (setq-default show-trailing-whitespace t)
 

@@ -5,5 +5,3 @@
       projectile-indexing-method 'alien)
 
 (exec-path-from-shell-initialize)
-
-(add-to-list 'ido-ignore-files "\\`\\.DS_Store")

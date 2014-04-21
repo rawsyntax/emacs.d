@@ -14,7 +14,6 @@
           (lambda ()
             (compilation-shell-minor-mode 1)
             (show-paren-mode -1)
-            (tooltip-mode -1)
             (setq yas-dont-activate t)
             (setq show-trailing-whitespace nil)
             (autopair-mode -1)
