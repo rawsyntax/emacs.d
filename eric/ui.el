@@ -1,5 +1,5 @@
 ;; ring the bell less
-(setq visible-bell nil
+(setq visible-bell 1
       ring-bell-function (lambda ()
                            (unless (memq this-command
                                          '(isearch-abort
