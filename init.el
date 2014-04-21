@@ -20,6 +20,7 @@
                   'magit
                   'yasnippet
                   'multi-term
+                  'pivotal-tracker
 
                   'exec-path-from-shell
                   'dash-at-point
