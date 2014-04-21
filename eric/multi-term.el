@@ -1,6 +1,15 @@
 ;; use user's login shell for multi-term
 (setq multi-term-program (shell-command-to-string "dscl /Search -read \"/Users/$USER\" UserShell | awk '{print $2}'|tr -d \"\n\"  "))
 
+;; thanks https://github.com/redguardtoo/emacs.d/blob/master/init-term-mode.el
+(defadvice term-sentinel (around my-advice-term-sentinel (proc msg))
+  (if (memq (process-status proc) '(signal exit))
+      (let ((buffer (process-buffer proc)))
+        ad-do-it
+        (kill-buffer buffer))
+    ad-do-it))
+(ad-activate 'term-sentinel)
+
 (add-hook 'term-mode-hook
           (lambda ()
             (compilation-shell-minor-mode 1)
