@@ -113,3 +113,9 @@
   "Edit the `user-init-file', in another window."
   (interactive)
   (find-file-other-window user-init-file))
+
+;; thanks http://emacsredux.com/blog/2013/06/25/boost-performance-by-leveraging-byte-compilation/
+(defun byte-compile-init-dir ()
+  "Byte-compile all your dotfiles."
+  (interactive)
+  (byte-recompile-directory user-emacs-directory 0))
