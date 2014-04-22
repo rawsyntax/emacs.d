@@ -10,9 +10,6 @@
 [submodule "vendor/yasnippets-rails"]
 	path = vendor/yasnippets-rails
 	url = git://github.com/rawsyntax/yasnippets-rails.git
-[submodule "vendor/deft"]
-	path = vendor/deft
-	url = git://jblevins.org/git/deft.git
 [submodule "vendor/ag-and-a-half"]
 	path = vendor/ag-and-a-half
 	url = git@github.com:rawsyntax/ag-and-a-half.git

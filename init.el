@@ -13,7 +13,7 @@
   '(autopair paredit
 
     flx flx-ido projectile
-    smex magit yasnippet yagist multi-term pivotal-tracker
+    smex magit yasnippet yagist deft multi-term pivotal-tracker
     exec-path-from-shell
     dash-at-point
 
