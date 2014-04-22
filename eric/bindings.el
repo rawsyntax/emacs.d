@@ -41,6 +41,8 @@
 (global-set-key (kbd "C-c a") 'ag-and-a-half)
 
 (global-set-key (kbd "C-c t") 'toggle-shell-visor)
+(global-set-key (kbd "C-c C-S-t") 'multi-term)
+(global-set-key (kbd "C-x m") 'multi-term)
 
 ;; Why can't open-line just indent according to mode?
 (global-set-key (kbd "C-o") 'vi-open-next-line)
