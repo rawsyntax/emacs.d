@@ -26,7 +26,6 @@
     erlang
     feature-mode
     git-commit-mode
-    haml-mode
     js2-mode
     less-css-mode
     markdown-mode

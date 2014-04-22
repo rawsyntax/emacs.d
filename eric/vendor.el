@@ -8,5 +8,6 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
+;; required for sass mode to work (incompatible with package repo version)
 (require 'haml-mode)
 (require 'ag-and-a-half)
