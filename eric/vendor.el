@@ -11,6 +11,5 @@
 
 ;; marmalade's version is broken for emacs 24
 (require 'haml-mode)
-(require 'rhtml-mode)
 (add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
 (require 'ag-and-a-half)

@@ -35,6 +35,7 @@
     sass-mode
     slim-mode
     yaml-mode
+    rhtml-mode
 
     inf-ruby flymake-ruby
 

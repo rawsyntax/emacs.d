@@ -1,9 +1,6 @@
 [submodule "vendor/thorstadt-haml-mode"]
 	path = vendor/thorstadt-haml-mode
 	url = https://github.com/thorstadt/haml-mode
-[submodule "vendor/rhtml"]
-	path = vendor/rhtml
-	url = git://github.com/eschulte/rhtml.git
 [submodule "vendor/yasnippets-rspec"]
 	path = vendor/yasnippets-rspec
 	url = git://github.com/rawsyntax/yasnippets-rspec.git
