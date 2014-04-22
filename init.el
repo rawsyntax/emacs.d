@@ -9,55 +9,41 @@
 
 (unless package-archive-contents (package-refresh-contents))
 
-(defun ensure-installed (&rest packages)
-  "Checks if packages are installed, installs if not"
-  (cond ((consp packages)
-         (when (not (package-installed-p (car packages)))
-           (package-install (car packages)))
-         (apply 'ensure-installed (cdr packages)))))
+(defvar my-packages
+  '(autopair paredit
 
-;; packages I use
-(ensure-installed 'autopair
-                  'smex
-                  'magit
-                  'yasnippet
-                  'multi-term
-                  'pivotal-tracker
+    flx flx-ido projectile
+    smex magit yasnippet multi-term pivotal-tracker
+    exec-path-from-shell
+    dash-at-point
 
-                  'exec-path-from-shell
-                  'dash-at-point
+    browse-kill-ring
 
-                  'clojure-mode
-                  'coffee-mode
-                  'erlang
-                  'feature-mode
-                  'git-commit-mode
-                  'haml-mode
-                  'js2-mode
-                  'less-css-mode
-                  'markdown-mode
-                  'puppet-mode
-                  'rspec-mode
-                  'sass-mode
-                  'slim-mode
-                  'yaml-mode
+    zenburn-theme
 
-                  'flx
-                  'flx-ido
-                  'projectile
+    clojure-mode
+    coffee-mode
+    erlang
+    feature-mode
+    git-commit-mode
+    haml-mode
+    js2-mode
+    less-css-mode
+    markdown-mode
+    puppet-mode
+    rspec-mode
+    sass-mode
+    slim-mode
+    yaml-mode
 
-                  'browse-kill-ring
+    inf-ruby flymake-ruby
 
-                  'zenburn-theme
+    ido-ubiquitous find-file-in-project)
+  "A list of packages to ensure are installed at launch.")
 
-                  'smex
-                  'ido-ubiquitous
-                  'find-file-in-project
-                  'paredit
-
-                  'inf-ruby
-                  'flymake-ruby)
-
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
 
 (progn
   ;; Turn off mouse interface early in startup to avoid momentary display
