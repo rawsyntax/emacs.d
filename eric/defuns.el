@@ -164,3 +164,18 @@
   "Insert a time-stamp according to locale's date and time format."
   (interactive)
   (insert (format-time-string "%c" (current-time))))
+
+(defun toggle-shell-visor ()
+  "Brings up a visor like eshell buffer, filling the entire emacs frame"
+  (interactive)
+  (if (string= "term-mode" (eval 'major-mode))
+      (progn
+        (setq eawh-multi-term-buffer (buffer-name))
+        (jump-to-register :pre-shell-visor-window-configuration))
+    (window-configuration-to-register :pre-shell-visor-window-configuration)
+    (call-interactively 'multi-term-next)
+    (delete-other-windows)
+
+    (if (boundp 'eawh-multi-term-buffer)
+        (switch-to-buffer eawh-multi-term-buffer))
+    ))
