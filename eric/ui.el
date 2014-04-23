@@ -122,10 +122,6 @@ comment as a filename."
 ;; hook for setting up UI when not running in daemon mode
 (add-hook 'emacs-startup-hook 'reset-ui)
 
-;; idle-highlight annoys me, starter-kit turns it on by default
-(remove-hook 'prog-mode-hook 'idle-highlight-mode)
-
-
 (defun toggle-shell-visor ()
   "Brings up a visor like eshell buffer, filling the entire emacs frame"
   (interactive)
