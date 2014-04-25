@@ -10,10 +10,18 @@
     ad-do-it))
 (ad-activate 'term-sentinel)
 
+(defadvice term-send-input (around my-advice-term-send-input ())
+  (if (or (string-match "idg restart" (term-get-old-input-default))
+          (string-match "idg start" (term-get-old-input-default)))
+      (compilation-shell-minor-mode -1))
+  ad-do-it
+  )
+
+(ad-activate 'term-send-input)
+
 (add-hook 'term-mode-hook
           (lambda ()
             (compilation-shell-minor-mode 1)
-            (show-paren-mode -1)
             (setq yas-dont-activate t)
             (setq show-trailing-whitespace nil)
             (autopair-mode -1)
