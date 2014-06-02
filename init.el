@@ -16,6 +16,7 @@
     smex magit yasnippet yagist deft multi-term pivotal-tracker
     exec-path-from-shell
     dash-at-point
+    expand-region
 
     browse-kill-ring
 

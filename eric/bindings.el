@@ -55,6 +55,8 @@
 (global-set-key (kbd "C-c S") 'find-shell-init-file)
 (global-set-key (kbd "C-c I") 'find-user-init-file)
 
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; starter-kit-bindings
 (global-set-key (kbd "C-c f") 'find-file-in-project)
