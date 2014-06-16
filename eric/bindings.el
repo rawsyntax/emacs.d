@@ -95,3 +95,5 @@
 
 ;; M-S-6 is awkward
 (global-set-key (kbd "C-c q") 'join-line)
+
+(global-set-key (kbd "C-x d") 'dired-at-point)
