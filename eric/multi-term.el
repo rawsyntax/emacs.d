@@ -23,7 +23,6 @@
   (interactive)
   (end-of-line)
   (term-send-input))
-
 (add-hook 'term-mode-hook
           (lambda ()
             (compilation-shell-minor-mode 1)
@@ -36,5 +35,5 @@
             (add-to-list 'term-bind-key-alist '("C-z" . term-send-raw))
             (add-to-list 'term-unbind-key-list "RET")
             (add-to-list 'term-bind-key-alist '("RET" . term-eol-then-ret))
-            (setq term-buffer-maximum-size 50000)
+            (setq term-buffer-maximum-size 0)
             (define-key term-raw-map (kbd "C-y") 'term-paste)))
