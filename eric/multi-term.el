@@ -25,7 +25,6 @@
   (term-send-input))
 (add-hook 'term-mode-hook
           (lambda ()
-            (compilation-shell-minor-mode 1)
             (setq yas-dont-activate t)
             (setq show-trailing-whitespace nil)
             (setq term-eol-on-send nil)
