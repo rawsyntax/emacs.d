@@ -37,7 +37,7 @@
     yaml-mode
     rhtml-mode
 
-    inf-ruby flymake-ruby
+    enh-ruby-mode inf-ruby
 
     ido-ubiquitous find-file-in-project)
   "A list of packages to ensure are installed at launch.")
