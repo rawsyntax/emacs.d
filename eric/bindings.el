@@ -97,3 +97,5 @@
 (global-set-key (kbd "C-c q") 'join-line)
 
 (global-set-key (kbd "C-x d") 'dired-at-point)
+
+(global-set-key (kbd "<C-return>") 'pop-global-mark)
