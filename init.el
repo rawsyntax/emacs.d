@@ -39,7 +39,8 @@
 
     enh-ruby-mode inf-ruby
 
-    ido-ubiquitous find-file-in-project)
+    ido-ubiquitous find-file-in-project
+    sx)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
