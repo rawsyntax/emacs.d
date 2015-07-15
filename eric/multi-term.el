@@ -34,5 +34,5 @@
             (add-to-list 'term-bind-key-alist '("C-z" . term-send-raw))
             (add-to-list 'term-unbind-key-list "RET")
             (add-to-list 'term-bind-key-alist '("RET" . term-eol-then-ret))
-            (setq term-buffer-maximum-size 0)
+            (setq term-buffer-maximum-size 10000)
             (define-key term-raw-map (kbd "C-y") 'term-paste)))
