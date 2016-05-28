@@ -189,3 +189,9 @@
     (if (boundp 'eawh-multi-term-buffer)
         (switch-to-buffer eawh-multi-term-buffer))
     ))
+
+;; thanks http://irreal.org/blog/?p=354
+(defun json-format-region ()
+  (interactive)
+  (save-excursion
+    (shell-command-on-region (mark) (point) "python -m json.tool" (buffer-name) t)))
