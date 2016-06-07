@@ -1,1 +1,0 @@
-Blondie.local.el
