@@ -1,7 +1,6 @@
 ;; this is where I require non-elpa external dependencies
 (setq eawh-elisp-external-dir
-      ;; TODO: don't hardcode this
-      "/Users/eric/.emacs.d/vendor")
+      (expand-file-name (concat user-emacs-directory "vendor")))
 
 ;; add external projects to load path
 (dolist (project (directory-files eawh-elisp-external-dir t "\\w+"))
