@@ -10,3 +10,6 @@
 [submodule "vendor/ag-and-a-half"]
 	path = vendor/ag-and-a-half
 	url = git@github.com:rawsyntax/ag-and-a-half.git
+[submodule "vendor/apib-mode"]
+	path = vendor/apib-mode
+	url = git@github.com:w-vi/apib-mode.git

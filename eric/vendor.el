@@ -10,3 +10,4 @@
 ;; required for sass mode to work (incompatible with package repo version)
 (require 'haml-mode)
 (require 'ag-and-a-half)
+(require 'apib-mode)
