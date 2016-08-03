@@ -195,3 +195,22 @@
   (interactive)
   (save-excursion
     (shell-command-on-region (mark) (point) "python -m json.tool" (buffer-name) t)))
+
+;; thanks https://github.com/gausby/emacs.d/blob/master/setup/elixir-setup.el
+;; scratch pad buffer
+(defun eawh/alchemist-create-scratch-buffer ()
+  "Open a buffer in elixir/alchemist mode; use `C-c a v q` for
+evaluating the expressions in Elixir"
+  (interactive)
+  (switch-to-buffer "*elixir scratch*")
+  (elixir-mode)
+  (alchemist-mode))
+;; bind the scratch pad to C-c a i s, why 'i'? Dunno, it has something to do with
+;; evaluating stuff, I guess.
+;;(define-key alchemist-mode-keymap (kbd "i s") 'eawh/alchemist-create-scratch-buffer)
+
+(defun eawh/alchemist-run-credo-on-project ()
+  "Run credo on project"
+  (interactive)
+  (alchemist-mix-execute "credo"))
+;;(define-key alchemist-mode-keymap (kbd "p c") 'eawh/alchemist-run-credo-on-project)

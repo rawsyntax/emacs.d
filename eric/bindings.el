@@ -38,6 +38,7 @@
 (global-set-key (kbd "C-M-%") 'query-replace)
 
 ;; ag bindings
+(global-set-key (kbd "C-c C-a") 'ag-and-a-half)
 (global-set-key (kbd "C-c a") 'ag-and-a-half)
 
 (global-set-key (kbd "C-c t") 'toggle-shell-visor)
