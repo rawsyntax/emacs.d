@@ -23,6 +23,7 @@
     zenburn-theme
 
     alchemist
+    go-mode
     clojure-mode
     coffee-mode
     erlang
