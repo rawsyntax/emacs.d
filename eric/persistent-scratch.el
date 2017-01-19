@@ -1,0 +1,1 @@
+(persistent-scratch-setup-default)
