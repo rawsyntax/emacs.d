@@ -1,3 +1,5 @@
+(setq redisplay-dont-pause t)
+
 (when window-system
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (tooltip-mode -1)
