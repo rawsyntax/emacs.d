@@ -2,6 +2,8 @@
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (package-initialize)
 
@@ -36,6 +38,8 @@
     yaml-mode
     rhtml-mode
     web-mode
+    scala-mode
+    ensime
 
     enh-ruby-mode inf-ruby
 
