@@ -46,7 +46,7 @@
     ido-ubiquitous find-file-in-project
     sx
     launchctl
-    helm ;; helm-top for process management
+    dumb-jump
     )
   "A list of packages to ensure are installed at launch.")
 
