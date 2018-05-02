@@ -13,7 +13,7 @@
   '(autopair paredit
 
     flx flx-ido projectile
-    smex magit git-timemachine yasnippet yagist deft multi-term
+    smex magit git-timemachine yasnippet yagist multi-term
     exec-path-from-shell
     dash-at-point
     expand-region
