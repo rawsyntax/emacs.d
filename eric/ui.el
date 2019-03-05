@@ -25,6 +25,7 @@
       ediff-window-setup-function 'ediff-setup-windows-plain
       save-place-file (concat user-emacs-directory "places")
       backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
+      auto-save-file-name-transforms `((".*" , (concat user-emacs-directory "temp") t))
       diff-switches "-u")
 
 (add-hook 'before-make-frame-hook 'esk-turn-off-tool-bar)
