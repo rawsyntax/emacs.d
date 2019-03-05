@@ -13,3 +13,6 @@
 [submodule "vendor/apib-mode"]
 	path = vendor/apib-mode
 	url = git@github.com:w-vi/apib-mode.git
+[submodule "vendor/go-projectile"]
+	path = vendor/go-projectile
+	url = git@github.com:dougm/go-projectile.git

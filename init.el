@@ -23,7 +23,18 @@
     zenburn-theme
 
     alchemist
+
     go-mode
+    go-add-tags
+    go-autocomplete
+    go-dlv
+    go-guru
+    go-mode
+    go-play
+    go-playground
+    go-eldoc
+    go-rename
+
     clojure-mode
     coffee-mode
     erlang
@@ -47,6 +58,8 @@
     sx
     launchctl
     dumb-jump
+    flymake
+    flymake-go
     )
   "A list of packages to ensure are installed at launch.")
 
