@@ -11,3 +11,4 @@
 (require 'haml-mode)
 (require 'ag-and-a-half)
 (require 'apib-mode)
+(require 'go-projectile)
