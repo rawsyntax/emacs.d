@@ -14,9 +14,17 @@
   (add-hook 'before-save-hook 'gofmt-before-save)
   ;; extra keybindings from https://github.com/bbatsov/prelude/blob/master/modules/prelude-go.el
   (let ((map go-mode-map))
-    (define-key map (kbd "C-c a") 'go-test-current-project) ;; current package, really
-    (define-key map (kbd "C-c m") 'go-test-current-file)
+    (define-key map (kbd "C-c ,") 'go-test-current-file)
     (define-key map (kbd "C-c .") 'go-test-current-test)
     (define-key map (kbd "C-c b") 'go-run)))
+
+(require 'compile)
+(require 'gotest)
+(dolist (elt go-test-compilation-error-regexp-alist-alist)
+  (add-to-list 'compilation-error-regexp-alist-alist elt))
+(defun prepend-go-compilation-regexps ()
+  (dolist (elt (reverse go-test-compilation-error-regexp-alist))
+    (add-to-list 'compilation-error-regexp-alist elt t)))
+(add-hook 'go-mode-hook 'prepend-go-compilation-regexps)
 
 (add-hook 'go-mode-hook 'my-go-mode-hook)
