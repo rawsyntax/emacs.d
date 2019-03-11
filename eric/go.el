@@ -25,6 +25,10 @@
 (defun prepend-go-compilation-regexps ()
   (dolist (elt (reverse go-test-compilation-error-regexp-alist))
     (add-to-list 'compilation-error-regexp-alist elt t)))
+
+
+(setq go-test-verbose t)
+
 (add-hook 'go-mode-hook 'prepend-go-compilation-regexps)
 
 (add-hook 'go-mode-hook 'my-go-mode-hook)
