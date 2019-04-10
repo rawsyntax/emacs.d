@@ -60,6 +60,7 @@
     dumb-jump
     flymake
     flymake-go
+    loccur
     )
   "A list of packages to ensure are installed at launch.")
 
