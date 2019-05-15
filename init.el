@@ -19,7 +19,9 @@
     expand-region
 
     browse-kill-ring
+    browse-at-remote
     persistent-scratch
+
     zenburn-theme
 
     alchemist
