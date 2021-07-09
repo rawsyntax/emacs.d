@@ -1,1 +1,1 @@
-(setq dumb-jump-prefer-searcher 'rg)
+(setq dumb-jump-prefer-searcher 'ag)
