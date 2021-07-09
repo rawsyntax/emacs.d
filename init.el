@@ -64,6 +64,7 @@
     flymake
     flymake-go
     loccur
+    x509-mode ;; with overriden viewcert in eric/x509-mode.el
     )
   "A list of packages to ensure are installed at launch.")
 
