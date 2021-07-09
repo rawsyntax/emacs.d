@@ -12,4 +12,5 @@
 (require 'ag-and-a-half)
 (require 'apib-mode)
 (require 'go-projectile)
+(require 'go-mod-mode)
 ;;(require 'hide-region)

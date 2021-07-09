@@ -12,6 +12,7 @@
 (defun my-go-mode-hook ()
   (local-set-key (kbd "M-.") #'godef-jump)
   (add-hook 'before-save-hook 'gofmt-before-save)
+  (flycheck-golangci-lint-setup)
   ;; extra keybindings from https://github.com/bbatsov/prelude/blob/master/modules/prelude-go.el
   (let ((map go-mode-map))
     (define-key map (kbd "C-c ,") 'go-test-current-file)
@@ -26,8 +27,8 @@
   (dolist (elt (reverse go-test-compilation-error-regexp-alist))
     (add-to-list 'compilation-error-regexp-alist elt t)))
 
-
-(setq go-test-verbose t)
+(setq go-test-verbose t
+      gofmt-args '("-s"))
 
 (add-hook 'go-mode-hook 'prepend-go-compilation-regexps)
 
