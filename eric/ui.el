@@ -1,4 +1,9 @@
-(setq redisplay-dont-pause t)
+(setq redisplay-dont-pause t
+      tabbar-mode nil)
+
+;; Turn off tabbars globally
+ (when (require 'tabbar nil t)
+      (tabbar-mode 0))
 
 (when window-system
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
