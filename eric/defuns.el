@@ -175,21 +175,6 @@
     (error (message "Invalid expression")
            (insert (current-kill 0)))))
 
-(defun toggle-shell-visor ()
-  "Brings up a visor like eshell buffer, filling the entire emacs frame"
-  (interactive)
-  (if (string= "term-mode" (eval 'major-mode))
-      (progn
-        (setq eawh-multi-term-buffer (buffer-name))
-        (jump-to-register :pre-shell-visor-window-configuration))
-    (window-configuration-to-register :pre-shell-visor-window-configuration)
-    (call-interactively 'multi-term-next)
-    (delete-other-windows)
-
-    (if (boundp 'eawh-multi-term-buffer)
-        (switch-to-buffer eawh-multi-term-buffer))
-    ))
-
 ;; thanks http://irreal.org/blog/?p=354
 (defun json-format-region ()
   (interactive)
@@ -214,3 +199,19 @@ evaluating the expressions in Elixir"
   (interactive)
   (alchemist-mix-execute "credo"))
 ;;(define-key alchemist-mode-keymap (kbd "p c") 'eawh/alchemist-run-credo-on-project)
+
+(defun uniquify-all-lines-region (start end)
+  "Find duplicate lines in region START to END keeping first occurrence."
+  (interactive "*r")
+  (save-excursion
+    (let ((end (copy-marker end)))
+      (while
+          (progn
+            (goto-char start)
+            (re-search-forward "^\\(.*\\)\n\\(\\(.*\n\\)*\\)\\1\n" end t))
+        (replace-match "\\1\n\\2")))))
+
+(defun uniquify-all-lines-buffer ()
+  "Delete duplicate lines in buffer and keep first occurrence."
+  (interactive "*")
+  (uniquify-all-lines-region (point-min) (point-max)))
