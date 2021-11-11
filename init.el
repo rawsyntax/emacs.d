@@ -14,7 +14,7 @@
     amx
     smartparens
     flx flx-ido projectile
-    magit git-timemachine yasnippet yagist
+    smex magit git-timemachine yasnippet yagist
     multi-vterm ;; replacement for multi-term
     exec-path-from-shell
     dash-at-point
