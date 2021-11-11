@@ -13,4 +13,6 @@
 (require 'apib-mode)
 (require 'go-projectile)
 (require 'go-mod-mode)
+(require 'x509-mode)
+(require 'vterm-toggle)
 ;;(require 'hide-region)

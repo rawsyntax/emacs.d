@@ -28,3 +28,6 @@
 [submodule "vendor/go-mod-mode"]
 	path = vendor/go-mod-mode
 	url = git@github.com:zkry/go-mod-mode.git
+[submodule "vendor/vterm-toggle"]
+	path = vendor/vterm-toggle
+	url = git@github.com:jixiuf/vterm-toggle.git

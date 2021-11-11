@@ -24,6 +24,11 @@
       sentence-end-double-space nil
       shift-select-mode nil
       mouse-yank-at-point t
+
+
+      ;; Prevent vertical split on larger monitors
+      ;; split-height-threshold 160
+
       uniquify-buffer-name-style 'forward
       whitespace-style '(face trailing lines-tail tabs)
       whitespace-line-column 80
@@ -40,6 +45,9 @@
 
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
+
+;; move through camelCaseWords
+(global-subword-mode 1)
 
 (set-default 'indent-tabs-mode nil)
 (set-default 'indicate-empty-lines t)

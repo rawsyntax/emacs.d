@@ -10,14 +10,17 @@
 (unless package-archive-contents (package-refresh-contents))
 
 (defvar my-packages
-  '(autopair paredit
-
+  '(
+    amx
+    smartparens
     flx flx-ido projectile
-    smex magit git-timemachine yasnippet yagist
+    magit git-timemachine yasnippet yagist
     multi-vterm ;; replacement for multi-term
     exec-path-from-shell
     dash-at-point
     expand-region
+    ivy
+    counsel-jq
 
     browse-kill-ring
     browse-at-remote
@@ -33,10 +36,10 @@
     go-dlv
     go-guru
     go-mode
-    go-play
     go-playground
     go-eldoc
     go-rename
+    dap-mode
 
     clojure-mode
     coffee-mode
@@ -53,14 +56,15 @@
     rhtml-mode
     web-mode
     scala-mode
-    ensime
 
     enh-ruby-mode inf-ruby
 
-    ido-ubiquitous find-file-in-project
+    ido-completing-read+
+    find-file-in-project
     sx
     launchctl
     dumb-jump
+    flycheck ;; for go-mod-mode
     flymake
     flymake-go
     loccur

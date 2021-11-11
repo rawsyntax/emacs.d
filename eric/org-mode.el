@@ -4,3 +4,5 @@
       (sql . t)
     )
 )
+
+(setq org-hide-block-startup t)
