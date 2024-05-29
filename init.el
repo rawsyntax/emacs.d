@@ -1,9 +1,15 @@
 ;; setup marmalade package repo
 (require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
+(setq package-archives
+ '(("MELPA"        . "https://melpa.org/packages/")
+   ("MELPA Stable" . "https://stable.melpa.org/packages/")
+   ("GNU ELPA"     . "https://elpa.gnu.org/packages/")
+   ("NonGNU ELPA"  . "https://elpa.nongnu.org/nongnu/"))
+ package-archive-priorities
+ '(("MELPA"        . 8)
+   ("MELPA Stable" . 6)
+   ("GNU ELPA"     . 4)
+   ("NonGNU ELPA"  . 10)))
 
 (package-initialize)
 
@@ -11,6 +17,8 @@
 
 (defvar my-packages
   '(
+    compat
+    ein
     amx
     smartparens
     flx flx-ido projectile
@@ -21,6 +29,7 @@
     expand-region
     ivy
     counsel-jq
+    git-link
 
     browse-kill-ring
     browse-at-remote
@@ -69,6 +78,7 @@
     flymake-go
     loccur
     x509-mode ;; with overriden viewcert in eric/x509-mode.el
+    ;; which-key
     )
   "A list of packages to ensure are installed at launch.")
 
@@ -104,3 +114,16 @@
       (when (file-exists-p esk-user-config) (load esk-user-config))
       (when (file-exists-p esk-user-dir)
         (mapc 'load (directory-files esk-user-dir t "^[^#].*el$"))))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(mermaid-mode request ein git-link zenburn-theme yasnippet yaml-mode yagist x509-mode web-mode sx smex smartparens slim-mode scala-mode sass-mode rspec-mode rhtml-mode puppet-mode projectile persistent-scratch paredit multi-vterm magit loccur launchctl js2-mode inf-ruby ido-completing-read+ go-rename go-playground go-guru go-eldoc go-dlv go-autocomplete go-add-tags git-timemachine flymake-go flycheck flx-ido find-file-in-project feature-mode expand-region exec-path-from-shell erlang enh-ruby-mode dumb-jump dash-at-point dap-mode counsel-jq coffee-mode clojure-mode browse-kill-ring browse-at-remote amx alchemist)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -17,3 +17,4 @@
 (add-to-list 'auto-mode-alist '("\\.erb$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scala\\.html$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ts$" . web-mode))
